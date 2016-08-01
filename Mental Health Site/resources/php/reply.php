@@ -8,9 +8,13 @@
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <?php
-	echo '<a href="reply.php"><input type="button" id="reply" name="reply" value="Reply"></a>';
-	echo '<button type="button">report</button>';
-	echo '<button type="button">save</button>';
-	echo '<button type="button">like</button>';
+echo '<div id="replyThreadDiv">
+			<form>
+				<div class="form-group">
+					<label for="replyTextArea" >Reply:</label> 
+					<textarea class="form-control" rows="5" type="text" name="replyTextArea" id="replyTextArea" ></textarea></label>
+				</div>
+			</form>
+			<input type="submit" />
+		</div>';
 ?>
-		
