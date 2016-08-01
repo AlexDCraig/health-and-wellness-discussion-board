@@ -71,33 +71,9 @@
 		 echo '<p><b>User: </b>'.$row['username'].'<br><b>Title: </b>' . $row['title'] . '<br/><br/>';
 		 echo '<b>Thread contents: </b>' . $row['text']. '</p>';
 		 include 'buttons.php';
-		 echo '<div id="replyThreadDiv" style="display:none;">
-			<form>
-				<div >
-					<label for="replyTextArea" >Reply:</label> 
-					<textarea class="form-control" rows="5" type="text" name="replyTextArea" id="replyTextArea" ></textarea></label>
-				</div>
-			</form>
-			<input type="submit" />
-		</div>';
-		 echo '</div>';
 		}
-	  }
 	  mysqli_free_result($result);
 	  mysqli_close($dbc);  
-	  
-	  echo '<script>
-		var replyButtonPressed = 1;//1 when the new thread button is hidden
-		
-		function reply_post()
-		{
-			if (replyButtonPressed === 1)
-			{
-				document.getElementById("replyThreadDiv").style = "display:block;";
-				repolyButtonPressed = 0;	
-			}			
-		}
-	</script>';
 	?>
 	<footer>
 	  <p>&copy; 2016 Copyright Wellness Forum.</p>
